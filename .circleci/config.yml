@@ -22,13 +22,15 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - Name: "Say Hello"
-      - run: echo "hello"
+      - run: 
+         command: echo "hello"
   print_world:
     docker:
       - image: circleci/node:13.8.0
     steps:
       - Name: "Say World!"
-      - run: echo "World!"
+      - run: 
+        command:  echo "World!"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
