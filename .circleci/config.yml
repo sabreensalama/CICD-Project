@@ -24,16 +24,14 @@ jobs:
           at: ~/
       - run: cat ~/output.txt
   testing_when_fail:
-    docker:
-      - image:  circleci/node:13.8.0
+     docker:
+      - image: circleci/node:13.8.0
     steps:
       - run: exit 1
       - run:
-        name: on error
-        command: echo "it failed!"
-        when: on_fail
-    
-
+          name: on error
+          command: echo "It failed!"
+          when: on_fail
 
 
 workflows:
