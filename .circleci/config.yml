@@ -6,8 +6,10 @@ version: 2.1
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
   save_hello_world_output:
+    
     docker:
       - image: circleci/node:13.8.0
+    
     steps:
       - run: echo "Hello World!" > ~/output.txt
       - persist_to_workspace:
@@ -16,6 +18,7 @@ jobs:
               - output.txt
   
   print_output_file:
+  
     docker:
     - image: circleci/node:13.8.0
 
