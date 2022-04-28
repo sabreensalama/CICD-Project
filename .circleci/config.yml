@@ -23,7 +23,13 @@ jobs:
       - attach_workspace:
           at: ~/
       - run: cat ~/output.txt
-
+  testing_when_fail:
+    docker:
+      - image:  circleci/node:13.8.0
+    steps:
+      - run: return 1
+      - run: echo "it failed!"
+        when: on_fail
     
 
 
