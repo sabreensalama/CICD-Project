@@ -4,9 +4,6 @@ commands:
   print_pipeline_id:
     description: "Echo pipeline ID"
     parameters:
-      to:
-        type: string
-        default: $CIRCLE_WORKFLOW_ID
     steps:
       run: echo << parameters.to >>
 
