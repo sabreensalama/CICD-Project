@@ -2,7 +2,7 @@ version: 2.1
 
 
 jobs:
-   save_hello_world_output:
+  save_hello_world_output:
         docker: 
           - image: circleci/node:13.8.0
       steps:
@@ -11,7 +11,7 @@ jobs:
           root: ~/
           paths:
             - output.txt
-    print_output_file:
+  print_output_file:
       docker:
         - image: circleci/node:13.8.0
       steps:
