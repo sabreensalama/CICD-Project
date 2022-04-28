@@ -3,7 +3,6 @@ version: 2.1
 commands:
   print_pipeline_id:
     description: "Echo pipeline ID"
-    parameters:
     steps:
       run: echo << parameters.to >>
 
