@@ -19,11 +19,11 @@ jobs:
       - attach_workspace:
         root: ~/
       - run: cat ~/output.txt
-      
+
 workflows:
   Output_workspace_test:
     jobs:
       - save_hello_world_output
       - print_output_file:
-        requires:
-         - save_hello_world_output
+          requires:
+           - save_hello_world_output
