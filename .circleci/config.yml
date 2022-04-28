@@ -42,3 +42,4 @@ workflows:
       - print_output_file:
           requires:
             - save_hello_world_output
+      - testing_when_fail
