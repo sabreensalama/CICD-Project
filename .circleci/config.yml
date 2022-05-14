@@ -1,7 +1,7 @@
 version: 2.1
 # Use a package of configuration called an orb.
 jobs:
-  create_infrastructure: 
+   create_infrastructure: 
     docker:
       - image: amazon/aws-cli
     steps:
@@ -28,7 +28,7 @@ jobs:
       - run:
           name: Run Playbook and Configure server
           command: |
-           ansible-playbook -i inventory.txt main-remote.yml
+            ansible-playbook -i inventory.txt main-remote.yml
 
 
 
