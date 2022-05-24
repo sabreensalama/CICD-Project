@@ -1,19 +1,19 @@
 version: 2.1
 
 jobs:
-  create_infra:
+  #create_infra:
   
-      docker:
-        - image: amazon/aws-cli
-      steps:
-        - checkout # check out the code in the project directory
-        - run: 
-            name: Create Cloudformation Stack
-            command: |
-              aws cloudformation deploy \
-                --template-file template.yml \
-                --stack-name myStack-${CIRCLE_WORKFLOW_ID:0:5} \
-                --region us-east-1
+   #   docker:
+    #    - image: amazon/aws-cli
+     # steps:
+      #  - checkout # check out the code in the project directory
+       # - run: 
+        #    name: Create Cloudformation Stack
+         #   command: |
+          #    aws cloudformation deploy \
+           #     --template-file template.yml \
+            #    --stack-name myStack-${CIRCLE_WORKFLOW_ID:0:5} \
+             #   --region us-east-1
 
   # Exercise: Config and Deployment
   configure_infra: 
@@ -38,5 +38,5 @@ workflows:
   # Name the workflow
   myWorkflow:
     jobs:
-      - create_infra
+      #- create_infra
       - configure_infra
