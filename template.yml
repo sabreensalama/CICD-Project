@@ -1,18 +1,19 @@
 # Exercise - Rollback
 AWSTemplateFormatVersion: 2010-09-09
-Description: ND9991 C3 L4 
+
+Description: Create-Infra-Ex
+
 Resources:
+
   EC2Instance:
     Type: 'AWS::EC2::Instance'
     Properties:
       SecurityGroups:
-        - !Ref InstanceSecurityGroup
-      # Change this, as applicable to you      
-      KeyName: AWS_EC2_Demo
-      # Change this, as applicable to you
-      # You may need to find out what instance types are available in your region - use https://cloud-images.ubuntu.com/locator/ec2/
-      ImageId: 'ami-0022f774911c1d690' 
+        - !Ref webserver
+      KeyName: AWS_EC2_Demo	
+      ImageId: 'ami-09d56f8956ab235b3' 
       InstanceType: t3.micro
+
   InstanceSecurityGroup:
     Type: 'AWS::EC2::SecurityGroup'
     Properties:
@@ -21,4 +22,4 @@ Resources:
         - IpProtocol: tcp
           FromPort: '22'
           ToPort: '22'
-          CidrIp: 0.0.0.0/0 
+          CidrIp: 0.0.0.0/0
