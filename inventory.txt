@@ -1,2 +1,2 @@
 [all]
-ec2-18-206-228-41.compute-1.amazonaws.com
+18.206.228.41
