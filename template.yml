@@ -10,7 +10,7 @@ Resources:
     Properties:
       SecurityGroups:
         - !Ref webserver
-      KeyName: AWS_EC2_Demo	
+      KeyName: AWS_EC2_Demo.pem	
       ImageId: 'ami-09d56f8956ab235b3' 
       InstanceType: t3.micro
 
