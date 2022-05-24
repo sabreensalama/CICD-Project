@@ -8,6 +8,8 @@ Resources:
   EC2Instance:
     Type: 'AWS::EC2::Instance'
     Properties:
+      SecurityGroups:
+        - webserver
       KeyName: AWS_EC2_Demo
       ImageId: 'ami-09d56f8956ab235b3' 
       InstanceType: t3.micro
