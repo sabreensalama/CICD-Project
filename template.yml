@@ -3,6 +3,12 @@ AWSTemplateFormatVersion: 2010-09-09
 
 Description: Create-Infra-Ex
 
+Parameters:
+  EnvironmentName:
+    Description: name
+    Type: String
+
+
 Resources:
 
   EC2Instance:
